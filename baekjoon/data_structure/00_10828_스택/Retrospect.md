@@ -7,3 +7,5 @@ baekjoon link: https://www.acmicpc.net/problem/10828
 - 확실히 함수를 하나 더 사용하는게 실행시간이 더 길어지는구나...    
 
 ## Yeojoo
+- 맞게 잘 한 것 같았는데도 시간초과가 나서 뭐지 했는데 input() 대신 sys.stdin.readline()을 사용했어야 했다.
+- 자바랑 파이썬이랑 당분간 같이 쓸텐데 문법을 둘다 신경써줘야겠다.
