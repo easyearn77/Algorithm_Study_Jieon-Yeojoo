@@ -8,3 +8,5 @@ baekjoon link: https://www.acmicpc.net/problem/18258
 - 그래도 deque 너무 편해... 포기못해 ㅋㅋㅋㅋ
 
 ## Yeojoo
+- 앞으로 input()은 거의 sys.stdin.readline()로 쓴다고 생각해야겠다ㅋㅋㅋㅋ
+- deque로도 풀 수가 있구나...! 나두 그방법으로도 풀어봐야겠다.
