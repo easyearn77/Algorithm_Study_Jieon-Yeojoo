@@ -7,3 +7,5 @@ baekjoon link: https://www.acmicpc.net/problem/18258
 - queue를 구현하는 문제인데 deque를 사용해도 될지 모르겠다... ㅋㅋ 애매쓰 
 
 ## Yeojoo
+- 앞으로 input()은 거의 sys.stdin.readline()로 쓴다고 생각해야겠다ㅋㅋㅋㅋ
+- deque로도 풀 수가 있구나...! 나두 그방법으로도 풀어봐야겠다.
