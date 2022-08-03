@@ -7,3 +7,5 @@ baekjoon link: https://www.acmicpc.net/problem/2164
 - 쉬운문제는 많이 풀고 빨리 넘어가야 할까? 어려운 문제들이 사실 좀 두렵다.
  
 ## Yeojoo
+- 바로 큐를 써야겠다고 생각한 문제다!
+- 아직은 문제들이 쉽긴하구만 호호!
