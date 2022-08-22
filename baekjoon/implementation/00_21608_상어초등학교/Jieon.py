@@ -29,7 +29,7 @@ for order in range(n**2):
     arr[tmp[0][2]][tmp[0][3]]=student[0]
 
 result=0
-student.sort()
+students.sort()
 
 for i in range(n):
     for j in range(n):
