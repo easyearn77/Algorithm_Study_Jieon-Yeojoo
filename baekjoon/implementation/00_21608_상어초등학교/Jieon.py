@@ -5,52 +5,41 @@ input= sys.stdin.readline
 dx=[0,-1,0,1]
 dy=[-1,0,1,0]
 
-n= int(input())
-like_dic={}
-map= [[0]*n for _ in range(n)]
+n=int(input());
+arr= [[0]*n for _ in range(n)]
+students= [list(map(int,input().split())) for _  in range(n**2)]
 
-for _ in range(n*n):
-    likes= list(map(int,input().split()))
-    like_dic[likes[0]]=likes[1:]
-    num=likes[0]
-    max_x=0
-    max_y=0
-    max_like =-1
-    max_empty= -1
-
+for order in range(n**2):
+    student = students[order]
+    tmp= [] #가능한 자리
     for i in range(n):
         for j in range(n):
-            like_cnt=0 
-            empty_cnt=0
-            if map[i][j]==0:
-                like_cnt=0
-                empty_cnt=0
+            if arr[i][j]==0:
+                like=0
+                blank=0
                 for k in range(4):
-                    nx= i+dx[k]
-                    ny= i+dy[k]
+                    nx, ny= i+dx[k], j+dy[k]
                     if 0<=nx<n and 0<=ny<n:
-                        if map[nx][ny] in like_dic[num]:
-                            like_cnt+=1
-                        if map[nx][ny]:
-                            empty_cnt+=1
-                if max_like < like_cnt or (max_like==like_cnt and max_empty < empty_cnt):
-                    max_x=i
-                    max_y=j
-                    max_like=like_cnt
-                    max_empty=empty_cnt
-    map[max_x][max_y]=num
+                        if arr[nx][ny] in student[1:]:
+                            like+=1
+                        if arr[nx][ny] == 0 : 
+                            blank+=1
+                tmp.append([like,blank,i,j])
+    tmp.sort(key=lambda x: (-x[0],-x[1],x[2],x[3]))
+    arr[tmp[0][2]][tmp[0][3]]=student[0]
 
-answer=0
+result=0
+student.sort()
+
 for i in range(n):
     for j in range(n):
-        cnt=0
+        ans=0
         for k in range(4):
-            nx= i+dx[k]
-            ny=i+dy[k]
+            nx,ny=i+dx[k],j+dy[k]
             if 0<=nx<n and 0<=ny<n:
-                if map[nx][ny] in like_dic[map[i][j]]:
-                    cnt+=1
-        if cnt!=0:
-            answer+=10**(cnt-1)
+                if arr[nx][ny] in students[arr[i][j]-1]:
+                    ans+=1
+        if ans!=0:
+            result+=10**(ans-1)
 
-print(answer)
+print(result)
